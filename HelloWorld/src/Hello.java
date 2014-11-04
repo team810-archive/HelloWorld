@@ -1,8 +1,16 @@
+import javax.swing.*;
 
 public class Hello {
 	public static void main(String args[]) {
-		for(int i=0;i<2;i++){
-			System.out.println("hello world");
+		String hi="hello world";
+		String helloworld="";
+		for(int i=0;i<hi.length();i++) {
+			if(hi.charAt(i)!=' ') {
+				helloworld+=Integer.valueOf(hi.charAt(i));
+			}
+			else
+				helloworld+=' ';
 		}
+		JOptionPane.showMessageDialog(null,helloworld+"!");
 	}
 }
